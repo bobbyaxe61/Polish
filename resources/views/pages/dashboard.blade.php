@@ -19,8 +19,11 @@
                                     <a href="{{ url('/show').'/'.$value[1] }}">
                                         <button type="button" class="block btn btn-success btn-md">View</button>
                                     </a>
-                                    <a href="{{ asset('storage').'/'.$value[0] }}">
-                                        <button type="button" class="block btn btn-primary btn-md">Download</button>
+                                    <a 
+                                        href="{{ url('storage').'/'.$value[0] }}" 
+                                        class="block btn btn-primary btn-md"
+                                        download="{{$value[1]}}">
+                                        Download
                                     </a>
                                     <form action="{{url('/delete').'/'.$value[1]}}" method="POST" style="display: inline-block;">
                                         @method('DELETE')

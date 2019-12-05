@@ -130,7 +130,7 @@ class PagesControllerAuth extends Controller
                 'service_price' => $service_price
             ];
 
-            // Save Retrun Response To Session
+            // Save Return Response To Session
             $request->session()->put('evaluation_outcome', $evaluation_outcome);
 
             return view('pages.uploads')->with('evaluation_outcome', $evaluation_outcome);
